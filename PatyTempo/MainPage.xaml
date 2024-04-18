@@ -4,8 +4,41 @@
              x:Class="PatyTempo.MainPage"
              Shell.NavBarIsVisible="false">
  
-  <Grid>
-     <Image Source= "noitechuvosa.avif"
-            Aspect= "AspectFill"/>
- </Grid>
-</ContentPage>
+  <Grid>  
+<Grid.RowDefinitions>
+   <RowDefinition Heigh="*"/>
+   <RowDefinition Heigh="80"/>
+   <RowDefinition Heigh="80"/>
+   <RowDefinition Heigh="*"/>
+   <RowDefinition Heigh="150"/>
+</Grid.RowDefinitions>
+<Grid.ColumnDefinitions>
+   <ColumnDefinition Widht="*"/>
+   <ColumnDefinition Widht="*"/>
+   <ColumnDefinition Widht="*"/>
+</Grid.ColumnDefinitions> 
+
+        <Image Source= "noitechuvosa.avif"
+            Aspect= "AspectFill"
+            Grid.Row="0"
+            Grid.rowSpan="5"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"/>
+ 
+ <Frame
+ Margin="10,0,0,0"
+   Padding="0"
+   CornerRadius="30"
+   BackgroundColor="White"
+   Grid.Row="1"
+    Grid.Column="0"/>
+    
+
+
+</Grid> 
+
+
+ 
+
+
+
