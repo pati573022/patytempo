@@ -25,62 +25,80 @@
             Grid.Column="0"
             Grid.ColumnSpan="3"/>
  
- <Frame
-  Margin="10,0,0,0"
-  Padding="0"
-  CornerRadius="30"
-  BackgroundColor="#88ffffff"
-  Grid.Row="1"
-  Grid.RowSpan="2"
-  Grid.Column="0"/>
-    
-<Frame 
-  Padding="0"
-  CornerRadius="30"
-  BackgroundColor="#88ffffff"
-  Grid.Row="1"
-  Grid.Column="1"/>
+        <Frame
 
-<Frame 
-  Padding="0"
-  CornerRadius="30"
-  BackgroundColor="#88ffffff"
-  Grid.Row="2"
-  Grid.Column="1"/>
+          Margin="10,0,0,0"
+          Padding="0"
+          CornerRadius="30"
+          BackgroundColor="#88ffffff"
+          Grid.Row="1"
+          Grid.RowSpan="2"
+          Grid.Column="0">
+          <Grid>
+          <Label x:Name="labelTemp"/>
+          <Label x:Name="labelSky"/>
+          <Label x:Name= "labelCidade."/>
+        </Frame>
 
-  <Frame
-  Margin="0,0,10,0"
-  Padding="0"
-  CornerRadius="30"
-  BackgroundColor="#88ffffff"
-  Grid.Row="1"
-  Grid.RowSpan="1"
-  Grid.Column="2"/>
-    
-<Frame 
- Margin="10,0,10,10"
-  Padding="0"
-  CornerRadius="30"
-  BackgroundColor="#88ffffff"
-  Grid.Row="4"
-  Grid.Column="0"
-  Grid.ColumnSpan="3"/>
+        <Frame 
+          Padding="0"
+          CornerRadius="30"
+          BackgroundColor="#88ffffff"
+          Grid.Row="1"
+          Grid.Column="1"/>
+          <Grid>
+          <Label x:Name= "labelChuva."/>
+          <Label x:Name= "labelHumidade"/>
+        </Frame>
 
-<Frame 
-Margin="0,0,10,0"
-  Padding="0"
-  CornerRadius="30"
-  BackgroundColor="#88ffffff"
-  Grid.Row="2"
-  Grid.Column="2"/>
+        <Frame 
+          Padding="0"
+          CornerRadius="30"
+          BackgroundColor="#88ffffff"
+          Grid.Row="2"
+          Grid.Column="1"/>
+          <Grid>
+          <Label x:Name= "labelAmanhecer."/>
+          <Label x:Name= "labelAnoitecer."/>
+        </Frame>
+
+        <Frame
+          Margin="0,0,10,0"
+          Padding="0"
+          CornerRadius="30"
+          BackgroundColor="#88ffffff"
+          Grid.Row="1"
+          Grid.RowSpan="1"
+          Grid.Column="2">
+          <Grid>
+          <Label x:Name= "labelForcawind."/>
+          <Label x:Name= "labelDirecaowind."/>
+        </Frame>
+
+        <Frame 
+        Margin="10,0,10,10"
+          Padding="0"
+          CornerRadius="30"
+          BackgroundColor="#88ffffff"
+          Grid.Row="4"
+          Grid.Column="0"
+          Grid.ColumnSpan="3">
+          <Grid>
+          <Label x:Name= "labelMoonFase."/>
+        </Frame>
+
+        <Frame 
+        Margin="0,0,10,0"
+          Padding="0"
+          CornerRadius="30"
+          BackgroundColor="#88ffffff"
+          Grid.Row="2"
+          Grid.Column="2">
+        </Frame>
+
+</Grid>
 
 
-
-   
-
-
-
-</Grid> 
 
 
  
