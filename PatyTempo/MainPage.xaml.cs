@@ -2,12 +2,13 @@
 
 public partial class MainPage : ContentPage
 {
+    Results Resultados = new Results();
 	public MainPage()
 	{
 
 	InitializeComponent();
-    Resultados= new results();
-	PreencherTela();
+    
+	
 
 	}
 
