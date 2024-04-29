@@ -1,6 +1,6 @@
 namespace PatyTempo;
 
-public class results
+public class Results
 {
     public int temp {get ; set; }
     public string description {get;set;}
@@ -16,5 +16,6 @@ public class results
     public string currently {get;set;}
     public string condition_code {get;set;}
     public string wind_cardinal { get; set; }
+    public double cloudiness {get; set;}
 
 }

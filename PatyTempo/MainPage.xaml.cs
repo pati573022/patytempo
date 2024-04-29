@@ -1,71 +1,70 @@
 ﻿using System.Text.Json;
-using Windows.Storage;
+
 
 namespace PatyTempo;
 
+
 public partial class MainPage : ContentPage
 {
-    Results Resultados = new Results();
-	public MainPage()
-	{
+        const string Url="https://api.hgbrasil.com/weather?woeid=455927&key=73874c1b";    
+        Resposta resposta;
+        public MainPage()
+        {
 
-	InitializeComponent();
-	AtualizaTempo();
+                InitializeComponent();
+                AtualizaTempo();
 
-	}
+        }
 
 	void PreencherTela()
-{
-     labelTemp.Text= Resultados.temp.ToString();
-     labelSky.Text= Resultados.description;
-     labelCidade.Text= Resultados.city;
-     labelChuva.Text= Resultados.rain.ToString();
-     labelHumidade.Text= Resultados.humidity.ToString();
-     labelAmanhecer.text= Resultados.sunrise;
-     labelAnoitecer.Text= Resultados.sunset;
-     labelForcawind.Text= Resultados.wind_speedy.ToString();
-     labelDirecaowind.Text= Resultados.wind_direction;
-     labelMoonFase.Text= Resultados.moon_phase;
- }
-async void AtualizaTempo()
-{
-        try 
-{
-   var httpCliente = new HttpClient();
-   var response = await httpCliente.GetAsync(Ur1);
-   if (response.IsSuccessStatusCode)
-   {
-        var content = await response.Content.ReadAsStringAsync();
-        Resposta = JsonSerializer.Deserialize<Resposta>(content);
+        {
+                labelTemp.Text= resposta.results.temp.ToString();
+                labelSky.Text= resposta.results.description;
+                labelCidade.Text= resposta.results.city;
+                labelChuva.Text= resposta.results.rain.ToString();
+                labelHumidade.Text= resposta.results.humidity.ToString();
+                labelAmanhecer.Text=  resposta.results.sunrise;
+                labelAnoitecer.Text=  resposta.results.sunset;
+                labelForcawind.Text=  resposta.results.wind_speedy.ToString();
+                labelDirecaowind.Text=  resposta.results.wind_direction;
+                labelMoonFase.Text=  resposta.results.moon_phase;
+
+                if (resposta.results.currently =="dia")
+                {
+                        if (resposta.results.rain >=10)
+                                fotodefundo.Source="diachuvoso.jpg";
+                        else if (resposta.results.cloudiness >=10)
+                                fotodefundo.Source="dianublado.jpg";
+                        else
+                                fotodefundo.Source="diaensolarado.jpg";
+                }
+                else               
+                {
+                        if (resposta.results.rain >=10)
+                                fotodefundo.Source="noitechuvosa.avif";
+                        else if (resposta.results.cloudiness >=10)
+                                fotodefundo.Source="noitenublado.jpg";
+                        else
+                                fotodefundo.Source="ceuestrelado.jpg";
+                }
+        }
+
+        async void AtualizaTempo()
+        {
+                try 
+                {
+                        var httpCliente = new HttpClient();
+                        var response = await httpCliente.GetAsync(Url);
+                        if (response.IsSuccessStatusCode)
+                        {
+                        var content = await response.Content.ReadAsStringAsync();
+                        resposta = JsonSerializer.Deserialize<Resposta>(content);
+                        }
+                        PreencherTela();
+                }
+                catch (Exception e)
+                {
+                        System.Diagnostics.Debug.WriteLine(e);
+                }
+        }
    }
-   PreencherTela();
-}
-catch (Exception e)
-{
-System.Diagnostics.Debug.WriteLine(e);
-}
-}
-}
-
-
-
-
-
-
-}
-
-
-        var httpCliente = new Http
-
-
-
-
-
-}
-
-
-
-
-
-
-}

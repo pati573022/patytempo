@@ -18,7 +18,7 @@
    <ColumnDefinition Width="*"/>
 </Grid.ColumnDefinitions> 
 
-        <Image Source= "noitechuvosa.avif"
+        <Image x:Name="fotodefundo"
             Aspect= "AspectFill"
             Grid.Row="0"
             Grid.RowSpan="5"
@@ -52,14 +52,14 @@
           CornerRadius="30"
           BackgroundColor="#88ffffff"
           Grid.Row="1"
-          Grid.Column="1"/>
+          Grid.Column="1">
           <Grid>
           <Grid.ColumnDefinitions>
    <ColumnDefinition Width="*"/>
    <ColumnDefinition Width="*"/>
    <ColumnDefinition Width="*"/>
    </Grid.ColumnDefinitions> 
-          <Label x:Name= "labelChuva."/>
+          <Label x:Name= "labelChuva"/>
           <Label x:Name= "labelHumidade"/>
           </Grid>
           </Frame>
@@ -69,7 +69,7 @@
           CornerRadius="30"
           BackgroundColor="#88ffffff"
           Grid.Row="2"
-          Grid.Column="1"/>
+          Grid.Column="1">
           <Grid>
           <Grid.ColumnDefinitions>
    <ColumnDefinition Width="*"/>
