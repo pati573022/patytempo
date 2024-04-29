@@ -41,7 +41,10 @@
    <ColumnDefinition Width="*"/>
    </Grid.ColumnDefinitions> 
 
-          <Label x:Name="labelTemp"/>
+          <Label x:Name="labelTemp"
+          FontSize= "20"
+          Grid.row= "0"
+          HorizontalOptions="Center"/>
           <Label x:Name="labelSky"/>
           <Label x:Name= "labelCidade"/>
           </Grid>
@@ -61,6 +64,17 @@
    </Grid.ColumnDefinitions> 
           <Label x:Name= "labelChuva"/>
           <Label x:Name= "labelHumidade"/>
+
+         <Label Text= "Chuva"
+         FontSize= "12"
+          Grid.Row= "0"
+          Grid.Column= "0"/>
+
+         <Label Text="Humidade"
+         FontSize= "12"
+         Grid.Row= "1"
+         Grid.Column= "0"/>
+
           </Grid>
           </Frame>
 
@@ -78,6 +92,16 @@
    </Grid.ColumnDefinitions> 
           <Label x:Name= "labelAmanhecer"/>
           <Label x:Name= "labelAnoitecer"/>
+
+        <Label Text= "Chuva"
+        FontSize= "12"
+          Grid.Row= "0"
+          Grid.Column= "0"/>
+
+         <Label Text="Humidade"
+         FontSize= "12"
+         Grid.Row= "1"
+         Grid.Column= "0"/>
           </Grid>
         </Frame>
 
@@ -97,6 +121,17 @@
    </Grid.ColumnDefinitions> 
           <Label x:Name= "labelForcawind"/>
           <Label x:Name= "labelDirecaowind"/>
+
+         <Label Text= "ForcaWind"
+         FontSize= "12"
+          Grid.Row= "0"
+          Grid.Column= "0"/>
+
+         <Label Text="DirecaoWind"
+         FontSize= "12"
+         Grid.Row= "1"
+         Grid.Column= "0"/>
+
           </Grid>
         </Frame>
 
@@ -115,9 +150,15 @@
    <ColumnDefinition Width="*"/>
    </Grid.ColumnDefinitions> 
           <Label x:Name= "labelMoonFase"/>
+
+          <Label Text= "Fase da Lua"
+          FontSize= "12"
+          Grid.Row= "0"
+          Grid.Column= "0"/>
+
+
           </Grid>
         </Frame>
-
         <Frame 
         Margin="0,0,10,0"
           Padding="0"

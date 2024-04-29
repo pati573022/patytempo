@@ -26,7 +26,7 @@ public partial class MainPage : ContentPage
                 labelAmanhecer.Text=  resposta.results.sunrise;
                 labelAnoitecer.Text=  resposta.results.sunset;
                 labelForcawind.Text=  resposta.results.wind_speedy.ToString();
-                labelDirecaowind.Text=  resposta.results.wind_direction;
+                labelDirecaowind.Text=  resposta.results.wind_direction.ToString();
                 labelMoonFase.Text=  resposta.results.moon_phase;
 
                 if (resposta.results.currently =="dia")
